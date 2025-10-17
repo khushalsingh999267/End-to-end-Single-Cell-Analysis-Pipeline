@@ -1,0 +1,10 @@
+name: analysis
+channels:
+  - pytorch
+  - bioconda
+  - conda-forge
+dependencies:
+  - python=3.9
+  - scanpy=1.9.8
+  - pytorch=2.1.0
+  - scikit-learn

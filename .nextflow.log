@@ -1,0 +1,61 @@
+Oct-17 00:08:12.762 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Oct-17 00:08:12.929 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.8
+Oct-17 00:08:13.161 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/codespace/.nextflow/plugins; core-plugins: nf-amazon@2.15.0-patch2,nf-azure@1.16.0-patch1,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.1,nf-tower@1.11.4-patch2,nf-wave@1.12.1
+Oct-17 00:08:13.216 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Oct-17 00:08:13.219 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Oct-17 00:08:13.226 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Oct-17 00:08:13.253 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Oct-17 00:08:13.391 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Oct-17 00:08:13.534 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [gigantic_lalande] DSL2 - revision: 6d873d5a4d
+Oct-17 00:08:13.540 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Oct-17 00:08:13.543 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Oct-17 00:08:13.663 [main] DEBUG nextflow.Session - Session UUID: e5225cac-abde-4831-a2b7-2b73906747ed
+Oct-17 00:08:13.667 [main] DEBUG nextflow.Session - Run name: gigantic_lalande
+Oct-17 00:08:13.668 [main] DEBUG nextflow.Session - Executor pool size: 2
+Oct-17 00:08:13.684 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Oct-17 00:08:13.699 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Oct-17 00:08:13.834 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.8 build 5956
+  Created: 06-10-2025 21:19 UTC 
+  System: Linux 6.8.0-1030-azure
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 21.0.7+6-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 16626@codespaces-8f6be0 [127.0.0.1]
+  CPUs: 2 - Mem: 7.8 GB (153.2 MB) - Swap: 0 (0)
+Oct-17 00:08:13.875 [main] DEBUG nextflow.Session - Work-dir: /workspaces/End-to-end-Single-Cell-Analysis-Pipeline/work [ext2/ext3]
+Oct-17 00:08:13.876 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /workspaces/End-to-end-Single-Cell-Analysis-Pipeline/bin
+Oct-17 00:08:13.943 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Oct-17 00:08:13.959 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Oct-17 00:08:13.973 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Oct-17 00:08:14.058 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Oct-17 00:08:14.126 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 3; maxThreads: 1000
+Oct-17 00:08:14.341 [main] DEBUG nextflow.Session - Session start
+Oct-17 00:08:16.385 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Oct-17 00:08:16.411 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/codespace/.nextflow/secrets/store.json
+Oct-17 00:08:16.425 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@11b5f4e2] - activable => nextflow.secret.LocalSecretsProvider@11b5f4e2
+Oct-17 00:08:16.442 [main] INFO  nextflow.Nextflow - 
+S I N G L E - C E L L - P I P E L I N E
+=======================================
+Reads         : /workspaces/End-to-end-Single-Cell-Analysis-Pipeline/data/gg_ko_SRR1039860{8,9}_[12].fastq.gz
+Transcriptome : /workspaces/End-to-end-Single-Cell-Analysis-Pipeline/data/c_elegans.PRJEB28388.WBPS18.transcriptome.fa
+Output Dir    : /workspaces/End-to-end-Single-Cell-Analysis-Pipeline/results
+
+Oct-17 00:08:16.494 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_75c7e30678e634de: /workspaces/End-to-end-Single-Cell-Analysis-Pipeline/main.nf
+Oct-17 00:08:16.496 [main] DEBUG nextflow.Session - Session aborted -- Cause: Access to 'KALLISTO.out' is undefined since the process 'KALLISTO' has not been invoked before accessing the output attribute
+Oct-17 00:08:16.509 [main] ERROR nextflow.cli.Launcher - Access to 'KALLISTO.out' is undefined since the process 'KALLISTO' has not been invoked before accessing the output attribute
+nextflow.exception.ScriptRuntimeException: Access to 'KALLISTO.out' is undefined since the process 'KALLISTO' has not been invoked before accessing the output attribute
+	at nextflow.script.ProcessDef.getOut(ProcessDef.groovy:153)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_75c7e30678e634de.runScript(Script_75c7e30678e634de:68)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:159)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:193)
+	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy:246)
+	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:246)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:139)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:379)
+	at nextflow.cli.Launcher.run(Launcher.groovy:513)
+	at nextflow.cli.Launcher.main(Launcher.groovy:673)

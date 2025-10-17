@@ -1,0 +1,3 @@
+2025-10-16 19:52:57	-	trusting_wilson	-	e755cb8c0140e6a3dc56d5130e222902	e047f07b-36e2-48d6-9544-946ad0d5f772	nextflow nextflow sudo mv nextflow /usr/local/bin/
+2025-10-16 19:56:41	1.6s	tender_koch	OK	876e8a82dd35733c84a20bcf3e7544e8	b53565f7-9d8a-4f9a-ac76-80ad22347121	nextflow run main.nf
+2025-10-17 00:08:13	-	gigantic_lalande	-	6d873d5a4da9815b1aa572d487479d4c	e5225cac-abde-4831-a2b7-2b73906747ed	nextflow run main.nf

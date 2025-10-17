@@ -28,3 +28,30 @@ curl -s https://get.nextflow.io | bash
 This command does two things:
 curl -s https://get.nextflow.io: Downloads the installer script.
 | bash: Pipes the script directly to the bash interpreter to be executed.
+
+move the file, we use the mv command. Because /usr/local/bin is a system directory, we also need to use sudo to get the necessary permissions.
+
+Run this command in your terminal:
+
+Bash
+
+sudo mv nextflow /usr/local/bin/
+
+## Installing tree for better and clean directory visualization 
+
+First, you may need to install it. Run this command to install the tree utility:
+
+Bash
+
+sudo apt-get update && sudo apt-get install -y tree
+Now, run the tree command to see your project's structure. Using -L 1 will show you just the top level, keeping the view clean.
+
+Bash
+
+tree -L 1
+You should see the directories we created and the nextflow file you just downloaded.
+
+This setup looks good. Right now, to run Nextflow, you'd have to type ./nextflow every time
+
+
+## Step 2: Now that our tool is ready, we can start building the pipeline itself. The core of a Nextflow pipeline is its main script file, which typically ends with the .nf extension.
